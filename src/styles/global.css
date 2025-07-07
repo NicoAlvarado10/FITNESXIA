@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+
+@theme{
+    --color-primary:#ff242e;
+    --color-secondary:#ff552d;
+    --color-bg-1:#323b3f;
+    --color-bg-2:#37383c;
+    --color-bg-3:#464646;
+    --color-extralight:#dfdfdf;
+    --container-max-width:1200px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+@utility btn{
+
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    color: var(--white);
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+img {
+  display: flex;
+
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+.testimonial-slide.hidden {
+  display: none;
+}
+.testimonial-slide.active {
+  display: block;
+}
+
+
+html,
+body {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #1d1b26;
+  overflow: hidden;
+}
+
