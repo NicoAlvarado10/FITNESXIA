@@ -1,0 +1,40 @@
+---
+import cardImg1 from '../assets/program-1.png'
+import cardImg2 from '../assets/program-2.png'
+import cardImg3 from '../assets/program-3.png'
+import cardImg4 from '../assets/program-4.png'
+---
+<section class="bg-bg-2 py-20 text-white" id="programs">
+    <div class="max-w-max-width flex flex-col gap-10 mx-auto px-4">
+        <div class="grid grid-cols-2 items-center justify-between gap-6 max-md:grid-cols-1">
+            <h2 class="text-4xl font-semibold max-md:text-center">The Best Programs We Offer For You</h2>
+            <p class="text-extralight max-md:text-center">From strength training and yoga to cardio and weight loss programs, we offer a variety of workouts to keep you motivated and on track. Join us and find the perfect program for you.</p>
+        </div>
+        <div class="grid grid-cols-4 gap-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
+            <article class="hover:bg-primary transition duration-150 px-4 py-8 rounded-2xl flex flex-col gap-2 bg-bg-3"> 
+                <img class="w-4/12 max-md:w-2/12" src={cardImg1.src} alt="program-1">
+                <h3 class="font-semibold">Strength Training</h3>
+                <p class="text-extralight">Build muscle, increase endurance, and enhance overall strength with our expert-led resistance and weight training sessions.</p>
+                <a class="text-extralight" href="#">Learn More <i class="ri-arrow-right-line"></i></a>
+            </article>
+             <article data-aos="fade-up" data-aos-delay="400" class="hover:bg-primary transition duration-150  px-4 py-8 rounded-2xl flex flex-col gap-2 bg-bg-3" >
+                <img class="w-4/12 max-md:w-2/12" src={cardImg2.src} alt="program-1">
+                <h3 class="font-semibold">Basic Yoga</h3>
+                <p class="text-extralight">Improve flexibility, balance, and mental well-being with guided yoga sessions designed for relaxation and inner peace.</p>
+                <a class="text-extralight" href="#">Learn More <i class="ri-arrow-right-line"></i></a>
+            </article>
+             <article data-aos="fade-up" data-aos-delay="800" class="hover:bg-primary transition duration-150  px-4 py-8 rounded-2xl flex flex-col gap-2 bg-bg-3" >
+                <img class="w-4/12 max-md:w-2/12" src={cardImg3.src} alt="program-1">
+                <h3 class="font-semibold">Body Building</h3>
+                <p class="text-extralight">Sculpt and define your physique with targeted workouts, expert coaching, and personalized training plans.</p>
+                <a class="text-extralight" href="#">Learn More <i class="ri-arrow-right-line"></i></a>
+            </article>
+             <article data-aos="fade-up" data-aos-delay="1200" class="hover:bg-primary transition duration-150  px-4 py-8 rounded-2xl flex flex-col gap-2 bg-bg-3" >
+                <img class="w-4/12 max-md:w-2/12" src={cardImg4.src} alt="program-1">
+                <h3 class="font-semibold">Weight Loss</h3>
+                <p class="text-extralight text-">Burn calories, boost metabolism, and achieve your ideal weight with our effective fat-burning and cardio-based programs.</p>
+                <a class="text-extralight " href="#">Learn More <i class="ri-arrow-right-line"></i></a>
+            </article>
+        </div>
+    </div>
+</section>
