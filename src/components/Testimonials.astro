@@ -1,0 +1,92 @@
+---
+import testimonyImg from '../assets/user-1.jpg'
+import testimonyImg2 from '../assets/user-2.jpg'
+import testimonyImg3 from '../assets/user-3.jpg'
+
+const testimonials = [
+    {
+        name: 'Alex Carter',
+        role: 'Software Engineer',
+        testimony: "FITNESXIA has completely changed my approach to fitness. The personal training sessions are amazing, and I've seen incredible progress in my strength and endurance!",
+        image: testimonyImg
+    },
+    {
+        name: 'Sarah Johnson',
+        role: 'Marketing Specialist',
+        testimony: "I've never felt more confident! The trainers at FITNESXIA truly care and help you push your limits in the best way possible.",
+        image: testimonyImg2
+    },
+    {
+        name: 'Michael Lee',
+        role: 'Entrepreneur',
+        testimony: "Joining FITNESXIA was the best decision I made for my health. The progress I’ve made is mind-blowing.",
+        image: testimonyImg3
+    },
+];
+---
+
+<section class="bg-bg-2 py-20" id="testimony">
+    <div class="max-w-max-width mx-auto px-4 text-white">
+        <div class="grid grid-cols-2 gap-8 items-center max-md:grid-cols-1">
+            <div>
+                <h2 class="text-4xl font-semibold mb-4">What Our Happy Clients Say About Us</h2>
+                <p class="text-extralight leading-8">Hear from our satisfied members who have transformed their fitness journey with FITNESXIA! Their success stories and experiences showcase the effectiveness of our programs, expert guidance, and supportive environment.</p>
+            </div>
+
+            <div class="relative">
+                <div id="testimonial-carousel" class="overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0%);" data-carousel-track>
+                        {testimonials.map((testimonial) => (
+                            <div class="min-w-full bg-bg-3 py-8 px-12 rounded-3xl" >
+                                <div class="flex items-center gap-4">
+                                    <img class="w-1/12 max-md:w-2/12 rounded-full" src={testimonial.image.src} alt="testimonial" />
+                                    <h3 class="font-semibold">{testimonial.name}<br /><span class="font-normal text-base">{testimonial.role}</span></h3>
+                                </div>
+                                <div class="flex items-center gap-1 text-yellow-400 mt-2">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                </div>
+                                <p class="text-extralight mt-2">{testimonial.testimony}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <!-- Botones debajo -->
+<div class="flex justify-center gap-4 mt-4">
+  <button id="prev-btn" class="cursor-pointer bg-white text-black  py-2 px-3 rounded-full hover:bg-gray-300 transition duration-150">
+    <i class="ri-arrow-left-line"></i>
+  </button>
+  <button id="next-btn" class="cursor-pointer bg-white text-black  py-2 px-3 rounded-full hover:bg-gray-300 transition duration-150">
+    <i class="ri-arrow-right-line"></i>
+  </button>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        let currentIndex = 0;
+        const track = document.querySelector('[data-carousel-track]');
+        const testimonialsCount = track.children.length;
+
+        const updateCarousel = () => {
+            const percentage = -currentIndex * 100;
+            track.style.transform = `translateX(${percentage}%)`;
+        };
+
+        document.querySelector('#next-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonialsCount;
+            updateCarousel();
+        });
+
+        document.querySelector('#prev-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonialsCount) % testimonialsCount;
+            updateCarousel();
+        });
+    </script>
+</section>
