@@ -1,5 +1,14 @@
 ---
-
+import About from '../components/About.astro';
+import Header from '../components/Header.astro';
+import Programs from '../components/Programs.astro';
+import Service from '../components/Service.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import 'remixicon/fonts/remixicon.css'
+import '@fontsource/poppins';
+import 'aos/dist/aos.css';
 ---
 
 <html lang="en">
@@ -7,10 +16,23 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header />
+		<About/>
+		<Programs/>
+		<Service/>
+		<Testimonials/>
+		<Footer/>
 	</body>
 </html>
+
+<script> 
+      import AOS from "aos"; 
+      AOS.init({
+		  duration: 600,
+
+	  }
+	  );
+    </script>
