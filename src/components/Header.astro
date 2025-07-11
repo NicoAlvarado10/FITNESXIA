@@ -3,12 +3,11 @@
 import logo from '../assets/logo.png'
 import heroImg from '../assets/header.png'
 ---
-<header class="text-white h-dvh max-md:h-full " id="home">
-  <nav class="flex max-md:fixed max-md:top-0 max-md:left-0 max-md:right-0 max-md:z-50 max-md:bg-primary justify-between items-center max-w-max-width mx-auto pt-8 pb-4 px-4 relative">
+<header id="home" class="text-white h-screen max-2xl:h-full max-md:h-full">
+  <nav class="flex max-md:fixed max-md:top-0 max-md:left-0 max-md:right-0 max-md:z-50 max-md:bg-primary justify-between items-center max-w-max-width mx-auto pt-8 pb-4 px-4   relative" aria-label="Main Navigation">
     <a href="#">
-      <img src={logo.src} class="w-8/12 max-md:w-6/12" alt="logo" />
+      <img src={logo.src} alt="Fitnexia logo" class="w-8/12 " />
     </a>
-
     <button
       id="menu-toggle"
       class="md:hidden cursor-pointer text-white text-3xl z-20"
@@ -16,43 +15,99 @@ import heroImg from '../assets/header.png'
     >
       ☰
     </button>
-
     <ul
-  id="nav-menu"
-  class="hidden flex-col items-center text-center bg-primary md:flex md:flex-row gap-4 md:gap-8 absolute md:static top-full left-0 w-full md:w-auto md:bg-transparent md:p-0 z-10 py-4"
->
-  <li><a class="transition duration-150 max-md:font-semibold md:hover:text-primary max-md:py-3 max-md:block" href="#home">Home</a></li>
-  <li><a class="transition duration-150 max-md:font-semibold md:hover:text-primary max-md:py-3 max-md:block" href="#about">About Us</a></li>
-  <li><a class="transition duration-150 max-md:font-semibold md:hover:text-primary max-md:py-3 max-md:block" href="#programs">Programs</a></li>
-  <li><a class="transition duration-150 max-md:font-semibold md:hover:text-primary max-md:py-3 max-md:block" href="#testimony">Testimonials</a></li>
-  <li><a class="transition duration-150 max-md:font-semibold md:btn md:bg-primary md:hover:bg-[#ff242fc4] max-md:py-3 max-md:block" href="#">Sign Up</a></li>
-</ul>
-
+      id="nav-menu"
+      class="hidden flex-col items-center text-center bg-primary md:flex md:flex-row gap-4 md:gap-8 absolute md:static top-full left-0 w-full md:w-auto md:bg-transparent md:p-0 z-10 py-4"
+    >
+      <li><a href="#home" class="transition duration-150 max-md:font-semibold md:hover:text-primary max-md:py-3 max-md:block">Home</a></li>
+      <li><a href="#about" class="transition duration-150 max-md:font-semibold md:hover:text-primary max-md:py-3 max-md:block">About Us</a></li>
+      <li><a href="#programs" class="transition duration-150 max-md:font-semibold md:hover:text-primary max-md:py-3 max-md:block">Programs</a></li>
+      <li><a href="#testimony" class="transition duration-150 max-md:font-semibold md:hover:text-primary max-md:py-3 max-md:block">Testimonials</a></li>
+      <li><a href="#" class="transition duration-150 max-md:font-semibold md:btn md:bg-primary md:hover:bg-[#ff242fc4] max-md:py-3 max-md:block">Sign Up</a></li>
+    </ul>
   </nav>
 
-
-  <section class="max-w-max-width mx-auto grid pt-15 max-md:pb-10 grid-cols-2  px-4 max-md:grid-cols-1">
-    <div class="max-md:order-2 ">
-      <h1 data-aos="fade-up"   class="text-6xl  font-bold my-4 leading-16 max-md:text-center max-sm:text-5xl">GET HEALTHY BODY WITH THE PERFECT EXERCISES</h1>
-      <p  data-aos="fade-up" data-aos-delay="200" class="my-4 leading-8 max-md:text-center text-extralight">
+  <section class="max-w-max-width mx-auto grid pt-15 max-md:pt-24 max-md:pb-10 grid-cols-2 max-md:grid-cols-1 px-4">
+    <div class="max-md:order-2">
+      <h1 class="text-6xl font-bold my-4 leading-16 max-md:text-center max-sm:text-5xl">
+        GET HEALTHY BODY WITH THE PERFECT EXERCISES
+      </h1>
+      <p class="my-4 header-text leading-8 max-md:text-center text-extralight">
         Achieve your dream body with expertly designed exercises tailored for strength, endurance, and overall well-being. Whether you're a beginner or a fitness enthusiast, our workouts are crafted to help you stay active, build muscle, and improve flexibility.
       </p>
-      <button  data-aos="fade-up" data-aos-delay="400" class="cursor-pointer max-md:flex max-md:mx-auto bg-primary px-6 py-3 my-4 rounded-md transition duration-150 hover:bg-[#ff242fc4] hover:scale-105">
-        Get Started
-      </button>
-      <div data-aos="fade-up" data-aos-delay="600" class="my-4 flex items-center gap-4 font-semibold text-2xl">
-        <span  class="flex flex-col gap-2">105+ <br /><span class="font-normal text-sm text-extralight">Expert Trainers</span></span>
-        <span  class="flex flex-col gap-2">970+ <br /><span class="font-normal text-sm text-extralight">Member Joined</span></span>
-        <span  class="flex flex-col gap-2">135+ <br /><span class="font-normal text-sm text-extralight">Fitness Programs</span></span>
+      <div class="header-cta">
+        <button class="cursor-pointer max-md:flex max-md:mx-auto bg-primary px-6 py-3 my-4 rounded-md transition duration-150 hover:bg-[#ff242fc4] hover:scale-105">
+          Get Started
+        </button>
+      </div>
+      <div class="my-4 flex items-center max-md:justify-center gap-4 text-center font-semibold text-2xl">
+        <div class="header-number">
+          <span>105+</span><br />
+          <span class="font-normal text-sm text-extralight">Expert Trainers</span>
+        </div>
+        <div class="header-number">
+          <span>970+</span><br />
+          <span class="font-normal text-sm text-extralight">Member Joined</span>
+        </div>
+        <div class="header-number">
+          <span>135+</span><br />
+          <span class="font-normal  text-sm text-extralight">Fitness Programs</span>
+        </div>
       </div>
     </div>
-    <div class="mask-b-from-80">
-      <img data-aos="fade-left" data-aos-delay="100" src={heroImg.src} alt="hero-image" />
-    </div>
+
+    <figure class="mask-b-from-80 image max-md:order-1">
+      <img src={heroImg.src}  alt="Hero: person exercising" />
+    </figure>
   </section>
 </header>
 
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+</style>
+
+<script type="module">
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const section = entry.target;
+          // Todos los elementos a animar dentro del section
+          const elements = section.querySelectorAll('h1, .header-text, .header-cta ,.header-number ,.image');
+          elements.forEach((el, i) => {
+            el.style.animationDelay = `${i * 0.2}s`;
+            el.classList.add('animate');
+          });
+          observer.unobserve(section);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  const programsSection = document.querySelector('#home');
+  if (programsSection) {
+    observer.observe(programsSection);
+  }
+</script>
+
 <script >
+
+
  const toggle = document.getElementById('menu-toggle') as HTMLButtonElement | null;
   const nav = document.getElementById('nav-menu') as HTMLUListElement | null;
 
